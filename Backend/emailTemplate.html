@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Confirmation</title>
+</head>
+<body>
+    <h2>Payment Confirmed</h2>
+    <p>Hello {{ client.first_name }},</p>
+    <p>Your payment for the <strong>{{ subscription.name }}</strong> subscription has been confirmed.</p>
+    <p>Subscription active until: <strong>{{ expiry.strftime('%Y-%m-%d') }}</strong></p>
+    <p>Thank you for your business!</p>
+</body>
+</html>

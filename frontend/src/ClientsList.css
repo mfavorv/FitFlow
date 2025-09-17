@@ -1,0 +1,128 @@
+/* Styles for ViewClients.js component */
+
+.clients-container {
+  padding: 2rem;
+  background-color: #1a1a1a; /* Dark background for the page */
+  color: #f0f0f0;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.clients-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.clients-header h2 {
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+}
+
+/* General input field styles for this page */
+.clients-container .input-field {
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+    border: 1px solid #444;
+}
+
+.clients-container .input-field::placeholder {
+    color: #888;
+}
+
+.clients-table-container {
+  overflow-x: auto;
+  background-color: #252525;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.clients-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.clients-table th,
+.clients-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.clients-table th {
+  background-color: #333;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.clients-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.clients-table tbody tr:hover {
+  background-color: #303030;
+}
+
+.clients-table .actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* --- THIS IS THE CORE CHANGE FOR YOUR REQUEST --- */
+/* Style for the input fields during in-line editing */
+.clients-table .input-field {
+  background-color: #1a1a1a; /* Dark background for inputs */
+  color: #ffffff;             /* White text */
+  border: 1px solid #555;    /* A slightly lighter border */
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clients-table .input-field:focus {
+  outline: none;
+  border-color: var(--primary-color); /* Use primary color for focus */
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3); /* A subtle glow on focus */
+}
+
+.clients-table td input + input {
+    margin-top: 5px; /* Add some space between inputs in the same cell */
+}
+/* --- END OF CORE CHANGE --- */
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-badge.active { background-color: #2e7d32; color: white; }
+.status-badge.inactive { background-color: #c62828; color: white; }
+.status-badge.pending { background-color: #ff8f00; color: black; }
+
+.expiry-date {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-left: 5px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}

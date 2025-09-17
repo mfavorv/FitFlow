@@ -1,0 +1,85 @@
+/* Shared styles for Login and Forgot Password pages */
+
+.auth-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("https://images.unsplash.com/photo-1558611848-73f7eb4001a1") no-repeat
+      center center/cover;
+  font-family: "Poppins", sans-serif;
+}
+
+.auth-card {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px); /* For Safari */
+  border-radius: 18px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 100%;
+  max-width: 480px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  animation: fadeIn 0.8s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-card h2 {
+  color: var(--primary-color); /* From index.css */
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.auth-card p {
+  color: #ddd;
+  margin-bottom: 0.5rem;
+}
+
+/* Ensure inputs and buttons inside the card take full width and have no extra margin */
+.auth-card .input-field {
+  width: 100%;
+  margin-bottom: 0;
+  color: #ccc;
+  background-color: rgb(40, 40, 40);
+}
+
+.auth-card .btn {
+  width: 100%;
+}
+
+.auth-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 0.5rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+}
+
+.extra-link {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.extra-link a {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
